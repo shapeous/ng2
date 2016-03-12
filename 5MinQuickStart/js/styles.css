@@ -2,6 +2,6 @@ body {
   margin: .5em;
 }
 
-say-hello {
+say-hello h1 {
   color: salmon;
 }
