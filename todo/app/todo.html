@@ -10,3 +10,7 @@
     <a href="#" (click)="deleteTodo(i)">x</a>
   </li>
 </ul>
+
+<div *ngIf="todos.length >= 5">
+  <strong>Big List warning!!!</strong>
+</div>
