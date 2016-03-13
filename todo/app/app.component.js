@@ -20,6 +20,11 @@
         this.deleteTodo = function (i) {
           this.todos.splice(i, 1);
         };
+        
+        // We probably want a route to a different page here
+        this.updateTodo = function (i) {
+          this.todos[i] = this.todos[i] + " (modified)"
+        };
       }
     });
 })(window.app || (window.app = {}));

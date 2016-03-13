@@ -8,7 +8,7 @@
 <ul>
   <!-- Star directives modify the DOM -->
   <li *ngFor="#todo of todos; #i = index; #e = even" class="{{e? 'even' : 'odd'}}">
-    {{i + 1}}: {{todo}}
+    <a href="#" (click)="updateTodo(i)">{{(i + 1) < 10? 0 : ''}}{{i + 1}}</a>: {{todo}}
     <a href="#" (click)="deleteTodo(i)">x</a>
   </li>
 </ul>
