@@ -5,3 +5,11 @@ body {
 to-do {
   color: navy;
 }
+
+li.even {
+  background-color: lightcyan;
+}
+
+li.odd {
+  background-color: lightpink;
+}

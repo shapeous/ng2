@@ -1,11 +1,13 @@
-<!-- #newTodo is a Model variable associated with the input itself (not the value) within this template -->
-<input placeholder="New todo" #newTodo>
-<!-- This is the way to trigger a function onClick.  This behavior is on the button itself -->
-<button (click)="addTodo(newTodo)">Add</button>
+<form (submit)="addTodo(newTodo)">
+  <!-- #newTodo is a Model variable associated with the input itself (not the value) within this template -->
+  <input placeholder="New todo" #newTodo required><!-- HTML validation only works onSubmit -->
+  <!-- This is the way to trigger a function onClick.  This behavior is on the button itself -->
+  <button>Add</button>
+</form>
 
 <ul>
   <!-- Star directives modify the DOM -->
-  <li *ngFor="#todo of todos #i = index">
+  <li *ngFor="#todo of todos; #i = index; #e = even" class="{{e? 'even' : 'odd'}}">
     {{i + 1}}: {{todo}}
     <a href="#" (click)="deleteTodo(i)">x</a>
   </li>
