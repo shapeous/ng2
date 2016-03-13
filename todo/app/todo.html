@@ -1,3 +1,9 @@
+<!-- #newTodo is a Model variable associated with the input itself (not the value) within this template -->
+<input placeholder="New todo" #newTodo>
+<!-- This is the way to trigger a function onClick.  This behavior is on the button itself -->
+<button (click)="addTodo(newTodo)">Add</button>
+
 <ul>
-  <li *ngFor="#todo of todos">{{todo}}</li>
+  <!-- Star directives modify the DOM -->
+  <li *ngFor="#todo of todos #i = index">{{i + 1}}: {{todo}}</li>
 </ul>

@@ -11,6 +11,11 @@
     .Class({
       "constructor": function () {
         this.todos = ["Learn Angular 2", "Learn Bootstrap", "Learn MachII"];
+
+        this.addTodo = function (newTodo) {
+          this.todos.push(newTodo.value);
+          newTodo.value = '';
+        };
       }
     });
 })(window.app || (window.app = {}));
