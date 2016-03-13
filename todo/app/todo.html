@@ -5,5 +5,8 @@
 
 <ul>
   <!-- Star directives modify the DOM -->
-  <li *ngFor="#todo of todos #i = index">{{i + 1}}: {{todo}}</li>
+  <li *ngFor="#todo of todos #i = index">
+    {{i + 1}}: {{todo}}
+    <a href="#" (click)="deleteTodo(i)">x</a>
+  </li>
 </ul>

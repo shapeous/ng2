@@ -16,6 +16,10 @@
           this.todos.push(newTodo.value);
           newTodo.value = '';
         };
+        
+        this.deleteTodo = function (i) {
+          this.todos.splice(i, 1);
+        };
       }
     });
 })(window.app || (window.app = {}));
